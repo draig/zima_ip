@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ORGS>
+	<ORG identifier="742219060520140131">
+		<PersAcc login="013100453" name="Фроленков Юрий Владимирович" password="0047804">
+			<meter value_count="2" indicbef1="2" service="1" />
+		</PersAcc>
+		<PersAcc login="033002343" name="Шаравина Татьяна Васильевна" password="0053329">
+			<item service="6" norm="0" sum="411,84" tarif1="12,87"/>
+			<meter value_count="1" indicbef1="162" service="6"/>
+		</PersAcc>
+		<PersAcc login="001102703" name="Батурин Юрий Васильевич" password="0072120">
+			<item service="6" norm="0" sum="64,35" tarif1="12,87"/>
+			<item service="13" norm="0" sum="392,16" tarif1="98,04"/>
+			<item service="25" norm="0,023" sum="1 095,72" tarif1="1 545,45"/>
+			<meter value_count="1" indicbef1="251" service="13"/>
+			<meter value_count="1" indicbef1="0,709" service="25"/>
+			<meter value_count="1" indicbef1="434" service="6"/>
+		</PersAcc>
+		<PersAcc login="003001443" name="Горелов Николай Николаевич" password="0096741">
+			<item service="25" norm="0,023" sum="3 786,35" tarif1="1 545,45"/>
+			<meter value_count="1" indicbef1="2,45" service="25"/>
+			<meter value_count="2" indicbef1="1,47" service="25"/>
+		</PersAcc>
+		<PersAcc login="079001533" name="Цыганков Валентин Алексеевич" password="0075628">
+			<item service="25" norm="0,023" sum="321,45" tarif1="1 545,45"/>
+			<meter value_count="1" indicbef1="10" service="6"/>
+			<meter value_count="2" indicbef1="65" service="6"/>
+			<meter value_count="1" indicbef1="0,208" service="25"/>
+		</PersAcc>
+	</ORG>
+	<ORG identifier="542253611220140131">
+		<PersAcc login="001102907" name="Крицкий Сергей Васильевич" password="0072120">
+			<item service="6" norm="0" sum="202,35" tarif1="12,87"/>
+			<item service="13" norm="0" sum="992,66" tarif1="98,04"/>
+			<item service="25" norm="0,023" sum="1 095,72" tarif1="1 545,45"/>
+			<meter value_count="1" indicbef1="251" service="13"/>
+			<meter value_count="1" indicbef1="1,7" service="25"/>
+			<meter value_count="1" indicbef1="34" service="6"/>
+		</PersAcc>
+		<PersAcc login="003001908" name="Маликов Сергей Сергеевич" password="0096741">
+			<item service="25" norm="0,023" sum="3 886,50" tarif1="1 545,45"/>
+			<meter value_count="1" indicbef1="0,95" service="25"/>
+			<meter value_count="2" indicbef1="2,17" service="25"/>
+		</PersAcc>
+	</ORG>
+</ORGS>
