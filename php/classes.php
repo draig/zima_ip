@@ -42,13 +42,26 @@ class Meter {
     private $service;
     private $vc;
     private $ind;
+    private $person ;
 
     public function Meter ( $db_item) {
         $this->id = $db_item [ 'm_id' ] ;
         $this->service = $db_item [ 'm_service' ] ;
         $this->vc = $db_item [ 'm_value_count' ] ;
         $this->ind = $db_item [ 'm_indicbef1' ] ;
+        $this->person = $db_item [ 'm_person' ] ;
     }
+    
+    static function MeterById ( $id ) {
+        $query = "SELECT * FROM meter WHERE m_id = $id;" ;
+        $meter_search = mysql_query($query);
+        $db_meter = mysql_fetch_array($meter_search, MYSQLI_ASSOC) ;
+        if ( !$db_meter ) {
+            return false ;
+        }
+        return new Meter ($db_meter) ;
+    }
+    
     function getService() {
         return $this->service ;
     }
@@ -59,6 +72,10 @@ class Meter {
     
     function getInd() {
         return $this->ind ;
+    }
+    
+    function getPerson() {
+        return $this->person ;
     }
 
 }
@@ -139,5 +156,9 @@ class Person {
             $meters [] = new Meter ( $row ) ;
         }
         return $meters ;
+    }
+    
+    public function getId () {
+        return $this->id ;
     }
 }

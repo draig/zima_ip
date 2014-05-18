@@ -5,9 +5,17 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" media="screen" href="../jquery-ui-1.10.4.custom/css/redmond/jquery-ui-1.9.2.custom.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="../jquery.jqGrid-4.6.0/css/ui.jqgrid.css" />
         <link rel="stylesheet" type="text/css" href="../css/cerulean-bootstrap.css">
+
         <script src="//dashkevich.url.ph/static/js/googleAnalytics.js" type="text/javascript"></script>
         <script type="text/javascript" charset="UTF-8" src="../js/userpanel.js" ></script>
+        <script src="../jquery-ui-1.10.4.custom/js/jquery-1.4.4.min.js" type="text/javascript"></script>
+        <script src="../jquery-ui-1.10.4.custom/js/jquery-ui-1.8.6.custom.js" type="text/javascript"></script>
+        <script src="../jquery.jqGrid-4.6.0/js/i18n/grid.locale-ru.js" type="text/javascript"></script>
+        <script src="../jquery.jqGrid-4.6.0/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+
         <style>
             .infoblock {
                 padding-bottom: 15px ;
@@ -86,10 +94,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-10  col-sm-offset-1 persontable">
-
-                            <div id="itemTable" >
+                    <div class="row" align="center">
+                        <div class="col-md-10  col-sm-offset-1 persontable"> 
+                            <div id="itemTable" style="width: 610px;">
                                 <table class="table table-bordered">
                                     <tbody id="table">
                                         <tr>
@@ -110,61 +117,37 @@
                                         $items = $person->getItems();
                                         foreach ($items as $item) {
                                             echo "
-                                                <tr>
-                                                    <td>
-                                                        " . $item->getService() . "
-                                                    </td>
-                                                    <td>
-                                                        " . $item->getNorm() . "
-                                                    </td>
-                                                    <td>
-                                                        " . $item->getSum() . "
-                                                    </td>
-                                                    <td>
-                                                        " . $item->getTarif1() . "
-                                                    </td>
-                                                </tr>";
+                                            <tr>
+                                            <td>
+                                            " . $item->getService() . "
+                                            </td>
+                                            <td>
+                                            " . $item->getNorm() . "
+                                            </td>
+                                            <td>
+                                            " . $item->getSum() . "
+                                            </td>
+                                            <td>
+                                            " . $item->getTarif1() . "
+                                            </td>
+                                            </tr>";
                                         }
                                         ?>
 
                                     </tbody>
                                 </table>
+
                             </div>
-                            <div id="meterTable" style="display:none;" >
-                                <table class="table table-bordered">
-                                    <tbody id="table">
-                                        <tr>
-                                            <th width="34%">
-                                                Value count
-                                            </th>
-                                            <th width="33%">
-                                                Indicbef
-                                            </th>
-                                            <th width="33%">
-                                                Service
-                                            </th>
-                                        </tr>
-                                        <?php
-                                        $meters = $person->getMeters();
-                                        foreach ($meters as $meter) {
-                                            echo "
-                                                <tr>
-                                                    <td>
-                                                        " . $meter->getVc() . "
-                                                    </td>
-                                                    <td>
-                                                        " . $meter->getInd() . "
-                                                    </td>
-                                                    <td>
-                                                        " . $meter->getService() . "
-                                                    </td>
-                                                </tr>";
-                                        }
-                                        ?>
-                                    </tbody>
+                            <div id="meterTable" style="display:none;width: 610px;" >
+                                <table id="matermap">  
+                                </table> 
+                                <div id="materpanel">
+                                </div> 
+                                <script src="../js/userMater.js" type="text/javascript">
+                                </script>
+                                </tbody>
                                 </table>
                             </div>
-
                         </div>
                     </div>
                 </div>
